@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "c520996f-738d-4426-8e37-61202b0c2b40",
+		"name": "contractor-employer-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33726130",
+		"_collection_link": "https://gold-eclipse-938239.postman.co/workspace/My-Workspace~afb44975-191f-45bb-858b-2e6043909006/collection/33726130-c520996f-738d-4426-8e37-61202b0c2b40?action=share&source=collection_link&creator=33726130"
+	},
+	"item": [
+		{
+			"name": "/contracts/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_host}}/contracts/1",
+					"host": [
+						"{{api_host}}"
+					],
+					"path": [
+						"contracts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/contracts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_host}}/contracts",
+					"host": [
+						"{{api_host}}"
+					],
+					"path": [
+						"contracts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/jobs/unpaid",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_host}}/jobs/unpaid",
+					"host": [
+						"{{api_host}}"
+					],
+					"path": [
+						"jobs",
+						"unpaid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/jobs/:job_id/pay",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_host}}/jobs/1/pay",
+					"host": [
+						"{{api_host}}"
+					],
+					"path": [
+						"jobs",
+						"1",
+						"pay"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/balances/deposit/:userId",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"money\": \"500\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_host}}/balances/deposit/1",
+					"host": [
+						"{{api_host}}"
+					],
+					"path": [
+						"balances",
+						"deposit",
+						"1"
+					],
+					"query": [
+						{
+							"key": "profile_id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/best-profession?start=<date>&end=<date>",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "3",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_host}}/admin/best-profession?start=2019-08-17T19:11:26.737Z&end=2022-08-17T19:11:26.737Z",
+					"host": [
+						"{{api_host}}"
+					],
+					"path": [
+						"admin",
+						"best-profession"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2019-08-17T19:11:26.737Z"
+						},
+						{
+							"key": "end",
+							"value": "2022-08-17T19:11:26.737Z"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/admin/best-clients?start=<date>&end=<date>&limit=<integer>",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "profile_id",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api_host}}/admin/best-clients?start=2019-08-17T19:11:26.737Z&end=2022-08-17T19:11:26.737Z&limit=4",
+					"host": [
+						"{{api_host}}"
+					],
+					"path": [
+						"admin",
+						"best-clients"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "2019-08-17T19:11:26.737Z"
+						},
+						{
+							"key": "end",
+							"value": "2022-08-17T19:11:26.737Z"
+						},
+						{
+							"key": "profile_id",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "limit",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
